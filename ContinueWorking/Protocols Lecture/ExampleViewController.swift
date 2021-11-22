@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ExampleViewController: UIViewController {
+class ExampleViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
     var myData : [String:[String]] = ["Food": ["Apple", "orange", "banana"],
@@ -15,10 +15,50 @@ class ExampleViewController: UIViewController {
                                       "Animal":["Cat", "bird", "dog", "lion", "mouse"],
                                       "something":["a","b","c","d","e","f","g","h","i","j","k"]]
     var selectedCell : IndexPath?
+    @IBOutlet weak var myTable : UITableView!
+    @IBOutlet weak var imgV : UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func getImage(_ sender : UIButton){
+        let sheet = UIAlertController(title: "Image", message: "Select image source", preferredStyle: .actionSheet)
+        
+        // let action = UIAlertAction(title: "Camera", style: .defualt, handler: { action in })
+        
+        
+        sheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { action in
+            let imageController = UIImagePickerController()
+            imageController.sourceType = .camera
+            self.present(imageController, animated: true)
+        }))
+        
+        sheet.addAction(UIAlertAction(title: "Album", style: .default, handler: { action in
+            let imageController = UIImagePickerController()
+            imageController.sourceType = .photoLibrary
+            imageController.delegate = self
+//            imageController.modalPresentationStyle = .fullScreen
+            self.present(imageController, animated: true)
+        }))
+        
+        sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(sheet, animated: true)
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let img = info[.originalImage] as? UIImage
+        imgV.image = img
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
     
 
@@ -34,7 +74,16 @@ class ExampleViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? AddItemViewController {
-            vc.delegate = self
+            //vc.delegate = self
+//            vc.didAddItem = itemDidAdd
+            vc.didAddItem =  { [weak self] item in
+                guard let wself = self else {return}
+                
+                var newSection = wself.myData["General"] ?? []
+                newSection.append(item)
+                wself.myData["General"] = newSection
+                wself.myTable.reloadData()
+            }
         }
     }
 
@@ -43,7 +92,10 @@ class ExampleViewController: UIViewController {
 extension ExampleViewController : AddItemDelegate {
     
     func itemDidAdd(_ item: String) {
-        print(item)
+        var newSection = myData["General"] ?? []
+        newSection.append(item)
+        myData["General"] = newSection
+        myTable.reloadData()
     }
     
     

@@ -404,7 +404,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UTk-ra-mlc">
-                                <rect key="frame" x="20" y="108" width="374" height="696"/>
+                                <rect key="frame" x="20" y="224" width="374" height="518"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TempTableViewCell" rowHeight="84" id="tMj-cd-ozh" customClass="TempTableViewCell" customModule="ContinueWorking" customModuleProvider="target">
@@ -454,20 +454,45 @@
                                     <segue destination="oBl-dC-fhn" kind="show" id="Wze-Ab-FWU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mv0-I7-CKf">
+                                <rect key="frame" x="20" y="762" width="374" height="30"/>
+                                <state key="normal" title="GET IMAGE">
+                                    <color key="titleColor" red="0.74641812259999996" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getImage:" destination="UvW-F9-rT7" eventType="touchUpInside" id="sWP-Bq-obr"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NtC-p1-QYF">
+                                <rect key="frame" x="87" y="88" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="4Tf-Xq-nAM"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LeM-Hc-50D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Qcb-pi-3v4" firstAttribute="top" secondItem="UTk-ra-mlc" secondAttribute="bottom" constant="8" symbolic="YES" id="7Wi-sg-bQC"/>
+                            <constraint firstItem="Qcb-pi-3v4" firstAttribute="top" secondItem="Mv0-I7-CKf" secondAttribute="bottom" constant="20" id="9JM-Xt-nFX"/>
                             <constraint firstItem="LeM-Hc-50D" firstAttribute="trailing" secondItem="Qcb-pi-3v4" secondAttribute="trailing" constant="20" id="DQw-Y9-PwT"/>
+                            <constraint firstItem="LeM-Hc-50D" firstAttribute="trailing" secondItem="Mv0-I7-CKf" secondAttribute="trailing" constant="20" id="IPY-6a-FVd"/>
                             <constraint firstItem="LeM-Hc-50D" firstAttribute="bottom" secondItem="Qcb-pi-3v4" secondAttribute="bottom" constant="20" id="WcW-mg-gT8"/>
+                            <constraint firstItem="Mv0-I7-CKf" firstAttribute="leading" secondItem="LeM-Hc-50D" secondAttribute="leading" constant="20" id="d1g-eg-Kwd"/>
                             <constraint firstItem="Qcb-pi-3v4" firstAttribute="leading" secondItem="LeM-Hc-50D" secondAttribute="leading" constant="20" id="fR5-Vm-fIL"/>
+                            <constraint firstItem="NtC-p1-QYF" firstAttribute="top" secondItem="LeM-Hc-50D" secondAttribute="top" id="gR2-XI-9PM"/>
+                            <constraint firstItem="UTk-ra-mlc" firstAttribute="top" secondItem="NtC-p1-QYF" secondAttribute="bottom" constant="8" symbolic="YES" id="i8J-17-j4W"/>
                             <constraint firstItem="UTk-ra-mlc" firstAttribute="leading" secondItem="LeM-Hc-50D" secondAttribute="leading" constant="20" id="iUe-sG-hUt"/>
                             <constraint firstItem="LeM-Hc-50D" firstAttribute="trailing" secondItem="UTk-ra-mlc" secondAttribute="trailing" constant="20" id="lgf-st-hjY"/>
-                            <constraint firstItem="UTk-ra-mlc" firstAttribute="top" secondItem="LeM-Hc-50D" secondAttribute="top" constant="20" id="t9M-s4-FbL"/>
+                            <constraint firstItem="Mv0-I7-CKf" firstAttribute="top" secondItem="UTk-ra-mlc" secondAttribute="bottom" constant="20" id="rBK-13-gcv"/>
+                            <constraint firstItem="NtC-p1-QYF" firstAttribute="leading" secondItem="LeM-Hc-50D" secondAttribute="leading" constant="87" id="rfR-OX-ekd"/>
+                            <constraint firstItem="LeM-Hc-50D" firstAttribute="trailing" secondItem="NtC-p1-QYF" secondAttribute="trailing" constant="87" id="uT7-yk-mzb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bcB-wx-OkB"/>
+                    <connections>
+                        <outlet property="imgV" destination="NtC-p1-QYF" id="1F9-dc-44a"/>
+                        <outlet property="myTable" destination="UTk-ra-mlc" id="uGr-hb-zQL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHj-8y-EXT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

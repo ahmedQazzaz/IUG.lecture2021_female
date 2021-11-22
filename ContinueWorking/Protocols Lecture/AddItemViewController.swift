@@ -9,7 +9,10 @@ import UIKit
 
 class AddItemViewController: UIViewController {
 
-    var delegate : AddItemDelegate?
+    weak var delegate : AddItemDelegate?
+    
+    var didAddItem : ((_ : String)->Void)?
+    
     @IBOutlet weak var my_text : UITextField!
     
     override func viewDidLoad() {
@@ -19,7 +22,8 @@ class AddItemViewController: UIViewController {
     }
     
     @IBAction func addAction(_ sender : UIButton){
-        self.delegate?.itemDidAdd(my_text.text ?? "")
+        //self.delegate?.itemDidAdd(my_text.text ?? "")
+        self.didAddItem?(my_text.text ?? "")
     }
 
 }

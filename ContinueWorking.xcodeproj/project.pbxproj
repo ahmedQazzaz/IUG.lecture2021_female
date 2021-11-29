@@ -13,6 +13,7 @@
 		7740CAAB2738F74500D51612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7740CAA92738F74500D51612 /* Main.storyboard */; };
 		7740CAAD2738F74800D51612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7740CAAC2738F74800D51612 /* Assets.xcassets */; };
 		7740CAB02738F74800D51612 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7740CAAE2738F74800D51612 /* LaunchScreen.storyboard */; };
+		777678AE275204E1008AD793 /* PickersExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777678AD275204E1008AD793 /* PickersExampleViewController.swift */; };
 		7780E5632744D70D00D3062A /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780E5622744D70D00D3062A /* ExampleViewController.swift */; };
 		7780E5652744D97900D3062A /* TempTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780E5642744D97900D3062A /* TempTableViewCell.swift */; };
 		7780E5672748CC4E00D3062A /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780E5662748CC4E00D3062A /* AddItemViewController.swift */; };
@@ -28,6 +29,7 @@
 		7740CAAC2738F74800D51612 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7740CAAF2738F74800D51612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7740CAB12738F74800D51612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		777678AD275204E1008AD793 /* PickersExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickersExampleViewController.swift; sourceTree = "<group>"; };
 		7780E5622744D70D00D3062A /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		7780E5642744D97900D3062A /* TempTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempTableViewCell.swift; sourceTree = "<group>"; };
 		7780E5662748CC4E00D3062A /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		7740CAA22738F74500D51612 /* ContinueWorking */ = {
 			isa = PBXGroup;
 			children = (
+				777678AC275204BD008AD793 /* Native Components lecture */,
 				7780E5612744D6F600D3062A /* Protocols Lecture */,
 				7740CAA32738F74500D51612 /* AppDelegate.swift */,
 				7740CAA52738F74500D51612 /* SceneDelegate.swift */,
@@ -75,6 +78,14 @@
 				77A45265273F904700F10FB1 /* DetailsViewController.swift */,
 			);
 			path = ContinueWorking;
+			sourceTree = "<group>";
+		};
+		777678AC275204BD008AD793 /* Native Components lecture */ = {
+			isa = PBXGroup;
+			children = (
+				777678AD275204E1008AD793 /* PickersExampleViewController.swift */,
+			);
+			path = "Native Components lecture";
 			sourceTree = "<group>";
 		};
 		7780E5612744D6F600D3062A /* Protocols Lecture */ = {
@@ -162,6 +173,7 @@
 				7740CAA42738F74500D51612 /* AppDelegate.swift in Sources */,
 				7740CAA62738F74500D51612 /* SceneDelegate.swift in Sources */,
 				7780E5672748CC4E00D3062A /* AddItemViewController.swift in Sources */,
+				777678AE275204E1008AD793 /* PickersExampleViewController.swift in Sources */,
 				77A45266273F904700F10FB1 /* DetailsViewController.swift in Sources */,
 				7780E5632744D70D00D3062A /* ExampleViewController.swift in Sources */,
 			);

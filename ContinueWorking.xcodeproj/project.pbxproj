@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7726A6C427574A7300CA1E68 /* TestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726A6C327574A7300CA1E68 /* TestCollectionViewController.swift */; };
+		7726A6CD27575E4C00CA1E68 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726A6CC27575E4C00CA1E68 /* LoginService.swift */; };
 		7740CAA42738F74500D51612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7740CAA32738F74500D51612 /* AppDelegate.swift */; };
 		7740CAA62738F74500D51612 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7740CAA52738F74500D51612 /* SceneDelegate.swift */; };
 		7740CAA82738F74500D51612 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7740CAA72738F74500D51612 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7726A6C327574A7300CA1E68 /* TestCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewController.swift; sourceTree = "<group>"; };
+		7726A6CC27575E4C00CA1E68 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		7740CAA02738F74500D51612 /* ContinueWorking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContinueWorking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7740CAA32738F74500D51612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7740CAA52738F74500D51612 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +51,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7726A6C527575DB100CA1E68 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7726A6C627575DB900CA1E68 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7740CAA92738F74500D51612 /* Main.storyboard */,
+				7740CAAE2738F74800D51612 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7726A6C727575DC300CA1E68 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				777678AC275204BD008AD793 /* Native Components lecture */,
+				7780E5612744D6F600D3062A /* Protocols Lecture */,
+				7740CAA72738F74500D51612 /* ViewController.swift */,
+				77A45265273F904700F10FB1 /* DetailsViewController.swift */,
+				7726A6C327574A7300CA1E68 /* TestCollectionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7726A6C827575DCF00CA1E68 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7726A6CC27575E4C00CA1E68 /* LoginService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7726A6C927575DDE00CA1E68 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7726A6CA27575E0800CA1E68 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7740CAAC2738F74800D51612 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		7740CA972738F74500D51612 = {
 			isa = PBXGroup;
 			children = (
@@ -66,16 +121,15 @@
 		7740CAA22738F74500D51612 /* ContinueWorking */ = {
 			isa = PBXGroup;
 			children = (
-				777678AC275204BD008AD793 /* Native Components lecture */,
-				7780E5612744D6F600D3062A /* Protocols Lecture */,
+				7726A6C927575DDE00CA1E68 /* Helpers */,
+				7726A6C827575DCF00CA1E68 /* Services */,
+				7726A6C727575DC300CA1E68 /* ViewControllers */,
+				7726A6C627575DB900CA1E68 /* Views */,
+				7726A6C527575DB100CA1E68 /* Models */,
+				7726A6CA27575E0800CA1E68 /* Resources */,
 				7740CAA32738F74500D51612 /* AppDelegate.swift */,
 				7740CAA52738F74500D51612 /* SceneDelegate.swift */,
-				7740CAA72738F74500D51612 /* ViewController.swift */,
-				7740CAA92738F74500D51612 /* Main.storyboard */,
-				7740CAAC2738F74800D51612 /* Assets.xcassets */,
-				7740CAAE2738F74800D51612 /* LaunchScreen.storyboard */,
 				7740CAB12738F74800D51612 /* Info.plist */,
-				77A45265273F904700F10FB1 /* DetailsViewController.swift */,
 			);
 			path = ContinueWorking;
 			sourceTree = "<group>";
@@ -175,6 +229,8 @@
 				7780E5672748CC4E00D3062A /* AddItemViewController.swift in Sources */,
 				777678AE275204E1008AD793 /* PickersExampleViewController.swift in Sources */,
 				77A45266273F904700F10FB1 /* DetailsViewController.swift in Sources */,
+				7726A6CD27575E4C00CA1E68 /* LoginService.swift in Sources */,
+				7726A6C427574A7300CA1E68 /* TestCollectionViewController.swift in Sources */,
 				7780E5632744D70D00D3062A /* ExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

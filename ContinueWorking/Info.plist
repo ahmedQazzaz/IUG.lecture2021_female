@@ -64,5 +64,10 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>The app needs access to you image so we can hack your device</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

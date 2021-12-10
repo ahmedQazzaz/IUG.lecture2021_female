@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7726A6C427574A7300CA1E68 /* TestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726A6C327574A7300CA1E68 /* TestCollectionViewController.swift */; };
 		7726A6CD27575E4C00CA1E68 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726A6CC27575E4C00CA1E68 /* LoginService.swift */; };
+		7726A6E4275B52C600CA1E68 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726A6E3275B52C600CA1E68 /* ResponseModel.swift */; };
 		7740CAA42738F74500D51612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7740CAA32738F74500D51612 /* AppDelegate.swift */; };
 		7740CAA62738F74500D51612 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7740CAA52738F74500D51612 /* SceneDelegate.swift */; };
 		7740CAA82738F74500D51612 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7740CAA72738F74500D51612 /* ViewController.swift */; };
@@ -20,11 +21,14 @@
 		7780E5652744D97900D3062A /* TempTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780E5642744D97900D3062A /* TempTableViewCell.swift */; };
 		7780E5672748CC4E00D3062A /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7780E5662748CC4E00D3062A /* AddItemViewController.swift */; };
 		77A45266273F904700F10FB1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A45265273F904700F10FB1 /* DetailsViewController.swift */; };
+		77D915A9276091B700F001F1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D915A8276091B700F001F1 /* User.swift */; };
+		77D915AB2760981C00F001F1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D915AA2760981C00F001F1 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7726A6C327574A7300CA1E68 /* TestCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewController.swift; sourceTree = "<group>"; };
 		7726A6CC27575E4C00CA1E68 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		7726A6E3275B52C600CA1E68 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		7740CAA02738F74500D51612 /* ContinueWorking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContinueWorking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7740CAA32738F74500D51612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7740CAA52738F74500D51612 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 		7780E5642744D97900D3062A /* TempTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempTableViewCell.swift; sourceTree = "<group>"; };
 		7780E5662748CC4E00D3062A /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		77A45265273F904700F10FB1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		77D915A8276091B700F001F1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		77D915AA2760981C00F001F1 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 		7726A6C527575DB100CA1E68 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7726A6E3275B52C600CA1E68 /* ResponseModel.swift */,
+				77D915A8276091B700F001F1 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -90,6 +98,7 @@
 		7726A6C927575DDE00CA1E68 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				77D915AA2760981C00F001F1 /* API.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -230,6 +239,9 @@
 				777678AE275204E1008AD793 /* PickersExampleViewController.swift in Sources */,
 				77A45266273F904700F10FB1 /* DetailsViewController.swift in Sources */,
 				7726A6CD27575E4C00CA1E68 /* LoginService.swift in Sources */,
+				77D915AB2760981C00F001F1 /* API.swift in Sources */,
+				77D915A9276091B700F001F1 /* User.swift in Sources */,
+				7726A6E4275B52C600CA1E68 /* ResponseModel.swift in Sources */,
 				7726A6C427574A7300CA1E68 /* TestCollectionViewController.swift in Sources */,
 				7780E5632744D70D00D3062A /* ExampleViewController.swift in Sources */,
 			);

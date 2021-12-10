@@ -9,11 +9,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let auth = AuthServices()
+    
     
     @IBOutlet weak private var txt_myTextfield : UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        auth.login(usingUsername: "ahmed", andPassword: "123456") { obj in
+            
+            DispatchQueue.main.async {
+                let a = UIAlertController(title: "hi", message: obj?.user?.username ?? "", preferredStyle: .alert)
+                a.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                
+                self.present(a, animated: true)
+            }
+            
+        }
+        
+
+        
+        
     }
     
     

@@ -47,8 +47,7 @@ class AuthServices{
                         handler(res)
                     }
                 }
-            })
-            
+            })            
             task.resume() // << Send the request
         }
     }

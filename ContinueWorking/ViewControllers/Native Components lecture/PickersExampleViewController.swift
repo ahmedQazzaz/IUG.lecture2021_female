@@ -21,7 +21,9 @@ class PickersExampleViewController: UIViewController {
         super.viewDidLoad()
 
         myDatePicker.datePickerMode = .date
-        myDatePicker.preferredDatePickerStyle = .wheels
+        if #available(iOS 13.4, *) {
+            myDatePicker.preferredDatePickerStyle = .wheels
+        } 
         myDatePicker.addTarget(self, action: #selector(datePickerDidChange(_:)), for: .valueChanged)
         
         txt_dateOfBirth.inputView = myDatePicker

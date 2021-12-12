@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wt9-j2-KTP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ContinueWorking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="ContinueWorking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -215,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWB-o4-ErE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-943.47826086956525" y="985.71428571428567"/>
+            <point key="canvasLocation" x="-797" y="75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k7A-OK-wjL">
@@ -362,6 +363,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQj-wi-zpv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2097" y="813"/>
+        </scene>
+        <!--Falafel View Controller-->
+        <scene sceneID="5Db-Nn-r4P">
+            <objects>
+                <viewController storyboardIdentifier="FalafelViewController" id="wt9-j2-KTP" customClass="FalafelViewController" customModule="ContinueWorking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cFt-WJ-22p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ls-Cn-blX">
+                                <rect key="frame" x="20" y="244" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAi-6g-2Kw">
+                                <rect key="frame" x="20" y="802" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Xol-nz-M6u"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startAction:" destination="wt9-j2-KTP" eventType="touchUpInside" id="0Dv-Wy-7ln"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FDi-ad-G17"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FDi-ad-G17" firstAttribute="trailing" secondItem="7ls-Cn-blX" secondAttribute="trailing" constant="20" id="9Dc-me-fXm"/>
+                            <constraint firstItem="7ls-Cn-blX" firstAttribute="leading" secondItem="FDi-ad-G17" secondAttribute="leading" constant="20" id="DJh-kp-KbT"/>
+                            <constraint firstItem="7ls-Cn-blX" firstAttribute="top" secondItem="FDi-ad-G17" secondAttribute="top" constant="200" id="Iwf-H6-QTB"/>
+                            <constraint firstItem="FDi-ad-G17" firstAttribute="trailing" secondItem="VAi-6g-2Kw" secondAttribute="trailing" constant="20" id="Zos-JS-Ulv"/>
+                            <constraint firstItem="FDi-ad-G17" firstAttribute="bottom" secondItem="VAi-6g-2Kw" secondAttribute="bottom" constant="20" id="pN4-gl-aaQ"/>
+                            <constraint firstItem="VAi-6g-2Kw" firstAttribute="leading" secondItem="FDi-ad-G17" secondAttribute="leading" constant="20" id="uIz-JV-eQN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btn_start" destination="VAi-6g-2Kw" id="jrz-dQ-1TF"/>
+                        <outlet property="lb_timer" destination="7ls-Cn-blX" id="j9J-bf-8tP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RmU-Ch-eJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410.14492753623193" y="-633.48214285714278"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zIV-fO-XGf">
